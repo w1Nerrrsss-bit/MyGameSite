@@ -94,7 +94,7 @@ html, body {
  
     .main-download-btn:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 40px rgba(255, 75, 43, 0.8);
+        box-shadow: 0 10px 40px rgba(255, 75, 43, 0.8);               
     }
 .hero-fullscreen {
     position: relative;
