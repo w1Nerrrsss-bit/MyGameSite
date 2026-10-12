@@ -56,7 +56,7 @@ html, body {
 }
 
 
-/* --- Основной стиль выдвижной кнопки --- */
+
 .main-download-btn {
     position: fixed;
     left: 0;
@@ -72,19 +72,19 @@ html, body {
     text-transform: uppercase;
     letter-spacing: 2px;
     box-shadow: 0 5px 30px rgba(255, 75, 43, 0.5);
-    /* Сколько торчит слева в покое (регулируй px под себя) */
+   
     transform: translateX(calc(-94% + 80px));
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
 }
 
-    /* При наведении — выезжает */
+    
     .main-download-btn:hover {
         transform: translateX(0);
         box-shadow: 0 10px 40px rgba(255, 75, 43, 0.9);
     }
 
 
-/* --- Позиции кнопок по высоте (ВСТАВЛЯТЬ СЮДА) --- */
+
 .btn-pos-1 {
     top: 25%;
 }
@@ -219,4 +219,207 @@ html, body {
     color: #ffffff; /* Цвет текста */
     letter-spacing: 1.5px; /* Расстояние между буквами */
     text-shadow: 0 0 10px rgba(255, 75, 43, 0.6); /* Легкое неоновое свечение */
+}
+<style >
+/* Стили плеера под эффект стекла */
+.audio-player-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(11, 15, 25, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 16px;
+    border-radius: 30px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+.audio-player-widget:hover {
+    border-color: rgba(0, 136, 204, 0.5);
+}
+
+.audio-btn {
+    background: #3A00B3;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .audio-btn:hover {
+        transform: scale(1.08);
+        background: #ff4b2b;
+    }
+
+.audio-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.audio-title {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.audio-status {
+    color: #888;
+    font-size: 10px;
+}
+
+.corner2-btn {
+    display: inline-block;
+    padding: 20px 20px;
+    background: #8A2BE2;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 30px rgba(255, 75, 43, 0.5);
+    transition: all 0.3s ease;
+}
+
+
+    .corner2-btn:hover {
+        background: rgba(255, 75, 43, 0.8);
+        border-color: white;
+        color: #000000;
+        transform: translateY(-12px);
+        box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+    }
+
+/* блок новостей */
+.news-section {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.news-container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.news-heading {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Сетка карточек */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Карточка в стиле Glassmorphism */
+.news-card {
+    background: rgba(11, 15, 25, 0.65);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 24px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+    .news-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(0, 136, 204, 0.6); /* Легкое синее свечение при наведении */
+    }
+
+.news-date {
+    display: inline-block;
+    font-size: 12px;
+    color: #0088cc;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.news-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #b0b0b0;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Стили капсулы онлайна */
+.online-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(11, 15, 25, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    border-radius: 50px; /* Сильно закруглённые края (капсула) */
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 13px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.online-text b {
+    color: #2ecc71; /* Зелёный акцент на цифре */
+}
+
+/* Пульсирующая зелёная точка */
+.pulse-dot {
+    width: 9px;
+    height: 9px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 rgba(46, 204, 113, 0.4);
+    animation: pulse-animation 2s infinite;
+}
+
+/* Анимация пульсации */
+@keyframes pulse-animation {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(46, 204, 113, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+    }
 }
